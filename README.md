@@ -29,14 +29,14 @@
 ---
 layout: default
 title: "文章标题"
-tags: [jekyll, coding]
+tags: [posts, projects]
 ---
 
 正文从这里开始。
 ```
 
 - 文章地址为 `/年/月/日/slug/`，建议文件名使用英文或拼音。
-- 标签用数组或空格分隔均可，例如 `tags: [jekyll, coding]`。
+- 标签用数组或空格分隔均可，例如 `tags: [posts, projects]`。
 - 代码块会自动加上 Windows 95 风格的攀爬行号。
 
 ## 新建标签
