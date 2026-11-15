@@ -1,0 +1,28 @@
+---
+layout: default
+title: NEW
+permalink: /new/
+editor: true
+---
+
+<div class="editor" id="markdown-editor">
+	<div class="editor_toolbar" role="toolbar" aria-label="Markdown 工具栏">
+		<button type="button" data-action="bold" title="加粗（Ctrl+B）"><b>B</b></button>
+		<button type="button" data-action="italic" title="斜体（Ctrl+I）"><i>I</i></button>
+		<button type="button" data-action="heading" title="二级标题">H2</button>
+		<button type="button" data-action="list" title="无序列表">List</button>
+		<button type="button" data-action="quote" title="引用">Quote</button>
+		<button type="button" data-action="link" title="链接">Link</button>
+		<button type="button" data-action="code" title="代码块">Code</button>
+		<button type="button" data-action="clear" title="清空编辑器">Clear</button>
+	</div>
+	<div class="editor_panes">
+		<textarea id="markdown-input" class="editor_source" spellcheck="false" placeholder="在这里写 Markdown……"></textarea>
+		<div id="markdown-preview" class="editor_preview" aria-live="polite"></div>
+	</div>
+	<div class="editor_footer">
+		<span class="editor_status" id="editor-status">临时编辑器 · 内容不会保存</span>
+		<button type="button" id="editor-copy">复制 Markdown</button>
+		<button type="button" id="editor-download">下载 .md</button>
+	</div>
+</div>

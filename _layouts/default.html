@@ -45,7 +45,7 @@
 		</div>
 		<div class="post_list">
 			{% unless page.date%}
-				{% if page.title == 'me' or page.title == '404...' %}
+				{% if page.title == 'me' or page.title == '404...' or page.editor %}
 					<ul>
 						{% for post in site.posts %}
 						<li><a href="{{ post.url }}" title="{{ post.title }}"><img src="/assets/img/file.ico" title="{{ post.title }}" />{{ post.title }}</a></li>
@@ -83,17 +83,23 @@
 			<ul class="topbar">
 				{% if page.date %}
 				<li>{{ page.date | date: '%Y-%m-%d' }}</li>
+				{% elsif page.editor %}
+				<li id="editor-date">{{ site.time | date: '%Y-%m-%d' }}</li>
 				{% else %}
 				<li>{{ site.name }}</li>
 				{% endif %}
 			</ul>
-			<div class="post_content">
+			<div class="post_content{% if page.editor %} post_content_editor{% endif %}">
 				{{ content }}
 			</div>
 		</div>
 	{% endif %}
 	<script src="/assets/js/001.js"></script>
 	<script src="/assets/js/002.js"></script>
+	{% if page.editor %}
+	<script src="/assets/js/marked.min.js"></script>
+	<script src="/assets/js/editor.js"></script>
+	{% endif %}
 	<div class="footer">
 		<p>© {{ site.time | date: '%Y' }} {{ site.name }} · Powered by <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> · Theme <a href="https://github.com/h01000110/windows-95" target="_blank" rel="noopener">Windows 95</a> by h01000110 (MIT)</p>
 	</div>
