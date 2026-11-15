@@ -14,7 +14,7 @@
 ├── _sass/           # SCSS 源文件
 ├── assets/          # CSS、JS、字体、图标
 ├── me/              # 关于页（/me/）
-├── new/             # 临时 Markdown 编辑器（/new/）
+├── new/             # 临时文本框（/new/）
 ├── tags/            # 标签页（/tag/<name>/）
 ├── 404.html         # 404 页面
 ├── index.html       # 首页
@@ -54,16 +54,11 @@ permalink: /tag/notes/
 
 然后在文章 front matter 中加上 `notes` 即可。
 
-## 临时 Markdown 编辑器
+## 临时文本框
 
-顶栏的 **NEW** 会打开 `/new/`，它是一个带实时预览的临时 Markdown 编辑器：
+顶栏的 **NEW** 会打开 `/new/`：和打开文章一样在下方显示 NEW 窗口，日期取浏览器当天日期，内容区是一个普通文本框。
 
-- 工具栏支持加粗、斜体、二级标题、列表、引用、链接和代码块，也支持 `Ctrl+B` / `Ctrl+I`。
-- 可以把内容复制到剪贴板，或下载为 `new-YYYY-MM-DD.md`。
-- 内容只存在当前页面，不会上传到服务器，刷新后会清空。
-- 窗口标题是 NEW，日期由浏览器取当天日期。
-
-预览由 [marked](https://github.com/markedjs/marked)（MIT License）渲染。
+内容只存在当前页面，不会上传到服务器，刷新后会清空。
 
 ## 本地预览
 
@@ -89,7 +84,7 @@ jekyll serve --livereload
 | 站点名称、描述、网址 | `_config.yml` |
 | 顶栏链接（About / GitHub / RSS） | `_includes/topbar.html` |
 | 关于页内容 | `me/index.md` |
-| 临时 Markdown 编辑器 | `new/index.html`、`assets/js/editor.js` |
+| 临时文本框 | `new/index.html` |
 | 首页文章列表 | `index.html` |
 | 404 文案 | `404.html` |
 | 配色、字号、字体 | `_sass/_main.scss` |
