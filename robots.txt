@@ -1,5 +1,1 @@
----
-layout: none
----
-User-agent: *
-Sitemap: {{ site.url }}/sitemap.xml
+Sitemap: https://zhpencil.github.io/sitemap.xml

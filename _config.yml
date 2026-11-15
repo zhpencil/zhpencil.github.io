@@ -1,63 +1,39 @@
-site: zhPencil
-url: zhpencil.github.io
+# ------------------------------
+# 站点信息
+# ------------------------------
+name: zhPencil
 title: zhPencil
-description: 
-googlewebfonts: Fira+Code:wght@400;500;700
-twitter:
-  username: #yourusername
-  card: summary
-  creator: #yourusername
-author:
-  twitter: #yourusername
-  name: #yourusername
-  avatar:
-  email: #youremail
-  url: #yoururl
-permalink: pretty
-
+description: 欢迎来到我写字的地方。
+url: "https://zhpencil.github.io"
 baseurl: ""
 
-highlighter: rouge
+# ------------------------------
+# 文章链接格式
+# ------------------------------
+permalink: /:year/:month/:day/:title/
+timezone: Asia/Shanghai
 
-exclude:
-  - .jekyll-cache
-  
-compress_html:
-  clippings: all
-  comments: ["<!-- ", " -->"]
+# ------------------------------
+# 构建设置
+# ------------------------------
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    disable: true
 
 sass:
-  sass_dir:          _sass
-  style:            :compressed
+  style: :compressed
+  sass_dir: _sass
 
 plugins:
-  - jekyll-paginate
-  - jekyll-seo-tag
+  - jekyll-feed
   - jekyll-sitemap
 
-collections:
-  pages:
-    output: true
-    permalink: /:name
-  posts:
-    output: true
-    permalink: /:year/:month/:day/:slug
-  
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      layout: "default"
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
+include: [".htaccess"]
+
+exclude:
+  - README.md
+  - LICENSE
+  - vendor
