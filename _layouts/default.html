@@ -8,10 +8,10 @@
 	<link rel="stylesheet" href="/assets/css/atom-one-light.css">
 	{% if page.title %}
 		<title>{% if page.title == 'me' %}关于{% else %}{{ page.title }}{% endif %} · {{ site.name }}</title>
-		<link rel="stylesheet" type="text/css" href="/assets/css/002.css">
+		<link rel="stylesheet" type="text/css" href="/assets/css/002.css?v={{ site.time | date: '%s' }}">
 	{% else %}
 		<title>{% if page.tag %}{{ page.tag }} · {% endif %}{{ site.name }}</title>
-		<link rel="stylesheet" type="text/css" href="/assets/css/001.css">
+		<link rel="stylesheet" type="text/css" href="/assets/css/001.css?v={{ site.time | date: '%s' }}">
 	{% endif %}
 	<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
 	<link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
