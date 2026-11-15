@@ -3,6 +3,7 @@
 # ------------------------------
 name: zhPencil
 title: zhPencil
+author: zhPencil
 description: 欢迎来到我写字的地方。
 url: "https://zhpencil.github.io"
 baseurl: ""
