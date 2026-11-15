@@ -17,6 +17,7 @@
 	<link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
 	{% feed_meta %}
+	{% if page.editor %}{% include new-styles.html %}{% endif %}
 	<script src="/assets/js/highlight.pack.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
 </head>
