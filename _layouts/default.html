@@ -36,6 +36,11 @@
 			<ul id="tag-list">
 				<li><a href="/" ><img src="/assets/img/disk.png" />(C:)</a>
 			<ul>
+				<li class="tag-website"><span class="tag-folder" title="网站"><img src="/assets/img/folder.ico" />website</span>
+					<ul>
+						<li><a href="/websites/kana/" title="五十音入门"><img src="/assets/img/file.ico" />kana</a></li>
+					</ul>
+				</li>
 				{% assign tags = site.tags | sort %}
 				{% for tag in tags %}
 				<li><a href="/tag/{{ tag | first | slugify }}/" title="{{ tag[0] | replace:'-', ' ' }}"><img src="/assets/img/folder.ico" />{{ tag[0] | replace:'-', ' ' }}</a></li>

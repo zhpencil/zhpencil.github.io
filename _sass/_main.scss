@@ -161,9 +161,14 @@ ul.topbar {
 #tag-list li {
     padding:0 0 0 2px;
 }
-#tag-list li a {
+#tag-list li a,
+#tag-list li .tag-folder {
     background: #fff8ff;
     display:block;
+}
+#tag-list li .tag-folder {
+    color: #000000;
+    cursor: default;
 }
 #tag-list li ul li {
     background:transparent url(/assets/img/pixel-alt.png) repeat-x 0 8px;
