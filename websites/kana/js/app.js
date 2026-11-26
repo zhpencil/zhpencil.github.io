@@ -11,7 +11,6 @@
   var lessonStageLabel = document.getElementById("lessonStageLabel");
   var lessonClose = document.getElementById("lessonClose");
   var pathEl = document.getElementById("path");
-  var pathEndEl = document.getElementById("pathEnd");
   var learnSummaryEl = document.getElementById("learnSummary");
   var reviewContentEl = document.getElementById("reviewContent");
   var statsContentEl = document.getElementById("statsContent");
@@ -358,13 +357,6 @@
       block.appendChild(pairs);
       pathEl.appendChild(block);
     });
-
-    var allDone = doneCount >= TOTAL_LESSONS;
-    pathEndEl.className = "path-end" + (allDone ? " is-done" : "");
-    pathEndEl.innerHTML =
-      '<span class="path-end__icon">' + icon(allDone ? "trophy" : "flag") + "</span>" +
-      "<div><div class=\"path-end__title\">" + (allDone ? "五十音全部完成" : "课程终点") + "</div>" +
-      '<div class="path-end__desc">' + (allDone ? "92 节课都点亮了。去复习页巩固吧。" : "完成全部 92 节课，点亮这张假名地图。") + "</div></div>";
 
     if (scrollToCurrent && next) {
       var currentWrap = $(".node-wrap--current", pathEl);

@@ -333,13 +333,6 @@ body.app-page:has(#lesson:not([hidden]))::before {
 }
 .node-wrap .duo-start { display: none; }
 
-.path-end {
-  margin: 22px 0 0;
-  padding: 20px 24px;
-}
-.path-end__title { font-family: var(--cn); font-size: 17px; }
-.path-end__desc { font-family: var(--cn); font-size: 13px; }
-
 /* -- review page ----------------------------------------------------------- */
 .review-layout {
   display: flex;

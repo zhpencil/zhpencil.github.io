@@ -374,42 +374,6 @@ body.app-page {
   transform: translateX(-50%) translateY(4px);
 }
 
-/* -- path end -------------------------------------------------------------- */
-.path-end {
-  margin: 26px 16px 38px;
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  border: 2px dashed var(--duo-line);
-  border-radius: 16px;
-  background: #fff;
-  color: var(--duo-text-3);
-}
-.path-end.is-done {
-  border-style: solid;
-  border-color: var(--duo-bee-500);
-  background: var(--duo-bee-100);
-  color: var(--duo-bee-700);
-}
-.path-end__icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
-  background: var(--duo-polar);
-  display: grid;
-  place-items: center;
-  color: var(--duo-hare);
-  flex: none;
-}
-.path-end.is-done .path-end__icon {
-  background: #fff;
-  color: var(--duo-bee-700);
-}
-.path-end__icon .duo-icon { width: 28px; height: 28px; }
-.path-end__title { font-size: 16px; font-weight: 800; }
-.path-end__desc { font-size: 13px; margin-top: 3px; line-height: 1.35; }
-
 /* -- lesson overlay -------------------------------------------------------- */
 .lesson {
   position: absolute;
