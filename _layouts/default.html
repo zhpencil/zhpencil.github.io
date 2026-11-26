@@ -36,11 +36,7 @@
 			<ul id="tag-list">
 				<li><a href="/" ><img src="/assets/img/disk.png" />(C:)</a>
 			<ul>
-				<li class="tag-website"><span class="tag-folder" title="网站"><img src="/assets/img/folder.ico" />website</span>
-					<ul>
-						<li><a href="/websites/kana/" title="五十音入门"><img src="/assets/img/file.ico" />kana</a></li>
-					</ul>
-				</li>
+				<li><a href="/tag/website/" title="website"><img src="/assets/img/folder.ico" />website</a></li>
 				{% assign tags = site.tags | sort %}
 				{% for tag in tags %}
 				<li><a href="/tag/{{ tag | first | slugify }}/" title="{{ tag[0] | replace:'-', ' ' }}"><img src="/assets/img/folder.ico" />{{ tag[0] | replace:'-', ' ' }}</a></li>
@@ -70,7 +66,7 @@
 		</div>
 		<div class="post_total">
 			{% if page.tag %}
-				<div class="left">{{ site.tags[page.tag] | size }} object(s)</div>
+				<div class="left">{% if page.objects %}{{ page.objects }}{% else %}{{ site.tags[page.tag] | size }}{% endif %} object(s)</div>
 			{% else %}
 				<div class="left">{{ site.posts | size }} object(s)</div>
 			{% endif %}
